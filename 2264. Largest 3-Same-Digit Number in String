@@ -1,0 +1,13 @@
+class Solution:
+    def largestGoodInteger(self, num: str) -> str:
+        s=[]
+        l=
+        for k in num:
+            if k not in s:
+                s.append(k)
+                if k*3 in num:l.append(k*3)
+            else:continue
+        l.sort()
+        return l[-1]  if  l else ""
+        
+        
