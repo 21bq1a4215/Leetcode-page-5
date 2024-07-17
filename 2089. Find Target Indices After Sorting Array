@@ -1,0 +1,7 @@
+class Solution:
+    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        nums.sort()
+        if target in nums:
+            i=nums.index(target)
+            return list(range(i,i+nums.count(target)))
+        
