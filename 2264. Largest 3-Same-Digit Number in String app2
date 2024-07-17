@@ -1,0 +1,14 @@
+class Solution:
+    def largestGoodInteger(self, num: str) -> str:
+        s=[]
+        l="0"
+        for k in num:
+            if k not in s:
+                s.append(k)
+                a=k*3
+                if a in num:
+                    if a>l:l=a
+            else:continue
+        return l  if  l!="0" else ""
+        
+        
