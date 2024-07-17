@@ -1,0 +1,12 @@
+class Solution:
+    def removeDigit(self, number: str, digit: str) -> str:
+        c=number.count(digit)
+        l=len(number)
+        if c==l or c==1:return number.replace(digit,"",1)
+        ans=[]
+        for k in range(l):
+            if number[k]==digit:ans.append(int(number[:k]+number[k+1:]))
+        return str(max(ans))
+            
+            
+        
