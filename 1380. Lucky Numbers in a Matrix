@@ -1,0 +1,18 @@
+import numpy as np
+class Solution:
+    def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
+        t=np.transpose(matrix)
+        print(t)
+        p=[]
+        l=[]
+        ans=[]
+        for k in matrix:l.append(min(k))
+        for k in t:ans.append(max(k))
+        for i in range(len(l)):
+            if l[i] in ans:p.append(l[i])
+            
+            
+        return p
+        
+        
+        
